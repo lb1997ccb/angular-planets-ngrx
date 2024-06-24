@@ -11,9 +11,13 @@ export class PlanetService {
 
   constructor(private http: HttpClient) { }
 
+  /**
+   * Fetches the list of planets from the external API.
+   * @returns An Observable emitting an array of Planet objects.
+   */
   getPlanets(): Observable<Planet[]> {
     return this.http.get<any>(this.apiUrl).pipe(
-      map(response => response.bodies || []) // Stelle sicher, dass bodies als Array initialisiert wird
+      map(response => response.bodies || []) // Ensure 'bodies' is initialized as an array
     );
   }
 }

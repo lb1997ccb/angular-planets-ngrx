@@ -8,6 +8,10 @@ import {loadPlanets, loadPlanetsFailure, loadPlanetsSuccess} from "../actions/pl
 @Injectable()
 export class PlanetEffects {
 
+  /**
+   * Effect that listens for `loadPlanets` action and fetches planets from `PlanetService`.
+   * Dispatches `loadPlanetsSuccess` on success or `loadPlanetsFailure` on error.
+   */
   loadPlanets$ = createEffect(() =>
     this.actions$.pipe(
       ofType(loadPlanets),
