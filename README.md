@@ -22,3 +22,6 @@ The `PlanetService` retrieves data about planets from an external API using Angu
 1. Clone this repository.
 2. Install dependencies using `npm install`.
 3. Run the application using `ng serve`.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
